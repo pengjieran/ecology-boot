@@ -17,6 +17,7 @@
 		<javax.mail.version>1.4.5</javax.mail.version>
 		<activation.version>1.1.1</activation.version>
 		<fastjson.version>1.2.23</fastjson.version>
+		<springfox.version>2.6.1</springfox.version>
 	</properties>
 	<!-- 设定主仓库，按设定顺序进行查找。 -->
 	<repositories>
@@ -76,6 +77,16 @@
 			<groupId>javax.mail</groupId>
 			<artifactId>mail</artifactId>
 			<version>${javax.mail.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${springfox.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${springfox.version}</version>
 		</dependency>
 	</dependencies>
 	<build>
