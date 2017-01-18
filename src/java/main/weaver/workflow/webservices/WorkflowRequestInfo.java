@@ -7,8 +7,13 @@
 
 package weaver.workflow.webservices;
 
-public class WorkflowRequestInfo  implements java.io.Serializable {
-    private java.lang.Boolean canEdit;
+import java.io.Serializable;
+
+public class WorkflowRequestInfo  implements Serializable {
+	
+	private static final long serialVersionUID = -8251776405121556409L;
+
+	private java.lang.Boolean canEdit;
 
     private java.lang.Boolean canView;
 

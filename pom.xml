@@ -2,9 +2,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.mtoliv</groupId>
-	<artifactId>ecology-boot</artifactId>
+	<artifactId>ecology-server</artifactId>
 	<version>0.0.1</version>
-	<name>ecology-boot</name>
+	<name>ecology-server</name>
 	<description>数据总线的项目,主要用于与泛微系统同步数据</description>
 
 	<parent>
@@ -18,6 +18,7 @@
 		<activation.version>1.1.1</activation.version>
 		<fastjson.version>1.2.23</fastjson.version>
 		<springfox.version>2.6.1</springfox.version>
+		<common-lang.version>3.5</common-lang.version>
 	</properties>
 	<!-- 设定主仓库，按设定顺序进行查找。 -->
 	<repositories>
@@ -42,6 +43,10 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-redis</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.axis</groupId>
@@ -87,6 +92,11 @@
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>${springfox.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${common-lang.version}</version>
 		</dependency>
 	</dependencies>
 	<build>
