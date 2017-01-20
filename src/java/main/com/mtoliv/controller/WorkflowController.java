@@ -4,6 +4,7 @@ import java.rmi.RemoteException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.core.env.Environment;
 import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.serializer.JdkSerializationRedisSerializer;
@@ -26,6 +27,9 @@ public class WorkflowController {
 	
 	@Autowired
 	private RedisConnectionFactory redisConnectionFactory;
+
+	@Autowired
+	private Environment environment;
 	
 	private final JdkSerializationRedisSerializer serializer = new JdkSerializationRedisSerializer();
 	
